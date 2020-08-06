@@ -1,0 +1,18 @@
+<div class="jumbotron container">
+    <form novalidate (ngSubmit)="createToken()" [formGroup]="stripeTest">
+        <div class="md-form">
+            <input type="text" mdbInput class="form-control" formControlName="name" placeholder="Jane Doe">
+        </div>
+        <hr>
+        <ngx-stripe-card
+        [options]="cardOptions"
+        [elementsOptions]="elementsOptions"
+        ></ngx-stripe-card>
+        <hr>
+        <div class="text-center">
+            <button mdbBtn mdbWavesEffect color="secondary" type="submit" class="mx-5">
+            Pay ( &#8377; 23000 )
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<div class="contaoner">
+    <div class="jumbotron col-sm-8 offset-md-2">
+        <p class="lead">Payment Form</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <form [formGroup]="paymentForm" (ngSubmit)="onPay()">
+                    
+                   <div class="md-form">
+                        <label for="fullAmount">Total Amount</label>
+                        <input type="text" mdbInput formControlName="fullAmount" class="form-control" name="fullAmount" id="fullAmount" required disabled>
+                        <!-- <mat-error *ngIf="paymentForm.controls.invalid">Please Enter Amount</mat-error> -->
+                   </div>
+                    <div class="md-form">
+                        <label >Enter Amount To Pay</label>
+                        <input type="text" mdbInput formControlName="amount" class="form-control" name="amount" required>
+                        <mat-error *ngIf="paymentForm.controls.invalid">Please Enter Amount</mat-error>
+                    </div>
+                    <button class="btn btn-info btn-block">Proceed Payment</button>
+                </form>            
+            </div>
+           <!--  <p class="mt-5">
+                Try it out using the test card number <b>4242 4242 4242 4242</b>, a random three-digit CVC number, any expiration date in the future, and a random five-digit U.S. ZIP code.
+            </p> -->
+          </div>
+    </div>
+</div>
